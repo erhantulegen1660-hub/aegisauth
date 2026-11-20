@@ -1,0 +1,56 @@
+# ==========================================
+# AEGIS AUTH — КОНФИГУРАЦИЯ
+# ==========================================
+
+settings:
+  keep-inventory-backup: true
+  restore-inventory-on-success: true
+  min-password-length: 5
+  max-password-length: 32
+  max-login-attempts: 5
+
+# Где игрок проходит капчу и авторизацию (поддерживает миры Multiverse / /mv)
+captcha-zone:
+  world: "auth"
+  x: 0.5
+  y: 65.0
+  z: 0.5
+  yaw: 0.0
+  pitch: 0.0
+  max-distance-from-spawn: 2.5
+
+# Куда игрок попадает СРАЗУ после капчи и успешной регистрации/входа
+spawn:
+  world: "world"
+  x: 0.5
+  y: 80.0
+  z: 0.5
+  yaw: 0.0
+  pitch: 0.0
+
+# Настройки капчи на карте
+captcha:
+  length: 5
+  noise-lines: 8
+  noise-dots: 140
+  max-tilt-degrees: 12
+
+# Сообщения (фиолетовый стиль AEGIS)
+messages:
+  prefix: "&8[&5✦ &dAEGIS&8] &r"
+  step-captcha: "&dШаг 1/2: &fПосмотри на карту в руке и напиши цифры капчи в чат &7(или /captcha <код>)&f."
+  captcha-wrong: "&cКод неверный! &7Проверь цифры на карте ещё раз или введи &d/captcha &7для новой карты."
+  captcha-refreshed: "&dВыдал новую карту с капчей. &fВведи цифры с неё в чат."
+  step-register: "&dШаг 2/2: &fКапча пройдена! Придумай пароль и введи: &d/register <пароль> <повтор>"
+  step-login: "&dШаг 2/2: &fКапча пройдена! Войди в аккаунт: &d/login <пароль>"
+  already-authed: "&aТы уже авторизован на сервере."
+  not-registered: "&cАккаунт ещё не зарегистрирован. &fИспользуй: &d/register <пароль> <повтор>"
+  already-registered: "&cЭтот ник уже зарегистрирован. &fИспользуй: &d/login <пароль>"
+  password-mismatch: "&cПароли не совпадают! &fПопробуй снова: &d/register <пароль> <повтор>"
+  password-length: "&cДлина пароля должна быть от &d%min% &cдо &d%max% &fсимволов."
+  wrong-password: "&cНеверный пароль! &7Осталось попыток: &d%left%"
+  kick-wrong-password: "&5AEGIS &8| &cПревышен лимит попыток входа."
+  register-success: "&aРегистрация прошла успешно! &dПереносим тебя на спавн..."
+  login-success: "&aС возвращением! &dПереносим тебя на спавн..."
+  blocked-action: "&7Сначала заверши шаги входа — посмотри подсказку в чате."
+  world-not-found: "&cМир &d%world% &cне найден или ещё не загружен! Проверь config.yml и /mv."

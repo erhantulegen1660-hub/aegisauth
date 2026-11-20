@@ -1,0 +1,28 @@
+name: AegisAuth
+version: 1.0.0
+main: dev.aegis.auth.AegisAuth
+api-version: '1.21'
+author: Aegis
+softdepend:
+  - Multiverse-Core
+description: Пошаговая авторизация с капчей на карте для сервера Aegis
+
+commands:
+  register:
+    description: Регистрация нового аккаунта
+    usage: /register <пароль> <повтор пароля>
+  login:
+    description: Вход в существующий аккаунт
+    usage: /login <пароль>
+  captcha:
+    description: Повторная выдача или ввод капчи
+    usage: /captcha [код]
+  aegisauth:
+    description: Настройка точек капчи/спавна и перезагрузка конфига
+    usage: /aegisauth <setcaptcha|setspawn|reload>
+    permission: aegisauth.admin
+
+permissions:
+  aegisauth.admin:
+    description: Управление плагином AegisAuth
+    default: op
