@@ -102,7 +102,7 @@ public class CaptchaRenderer extends MapRenderer {
 
             for (int i = 0; i < code.length(); i++) {
                 String ch = String.valueOf(code.charAt(i));
-                int charW = fm.charWidth(ch);
+                int charW = fm.stringWidth(ch);
                 int yOffset = rnd.nextInt(9) - 4;
                 double angle = Math.toRadians((rnd.nextDouble() * 2 - 1) * maxTiltDegrees);
 
@@ -135,7 +135,7 @@ public class CaptchaRenderer extends MapRenderer {
         int x = Math.max(10, (SIZE - totalW) / 2);
         for (int i = 0; i < row.length(); i++) {
             String ch = String.valueOf(row.charAt(i));
-            int w = fm.charWidth(ch);
+            int w = fm.stringWidth(ch);
             double angle = Math.toRadians((rnd.nextDouble() * 2 - 1) * maxTiltDegrees);
             AffineTransform old = g.getTransform();
             g.translate(x + w / 2.0, yCenter + (rnd.nextInt(7) - 3));
